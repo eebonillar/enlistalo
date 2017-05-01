@@ -2,10 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Functions {
-	/*Enviar e-mail*/
-	public function sendMail($emailto,$subject,$message) {
+	private $CI;
+	
+	public function __construct() {
+		$this->CI =& get_instance();
+	}
 
-		$this->load->library("email");
+	/*Enviar e-mail*/
+	public function send_mail($emailto,$subject,$message) {
+		$this->CI->load->library("email");
 
 		//configuracion para gmail
 		$configGmail = array(
@@ -19,12 +24,12 @@ class Functions {
 			'newline' => "\r\n"
 		);
 
-		$this->email->initialize($configGmail);
-		$this->email->from('enlistalo');
-		$this->email->to($emailto);
-		$this->email->subject($subject);
-		$this->email->message($message);
-		$this->email->send();
+		$this->CI->email->initialize($configGmail);
+		$this->CI->email->from('enlistalo');
+		$this->CI->email->to($emailto);
+		$this->CI->email->subject($subject);
+		$this->CI->email->message($message);
+		$this->CI->email->send();
 	}
 }
 ?>
