@@ -25,11 +25,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Logo</a>
+                    <a class="navbar-brand" href="base_url"><img id='img-menu' src="<?php echo base_url(); ?>assets/img/enlistalo/logotipo.png"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"><a href="#">Crear lista</a></li>
+                        <li class="down"><a href="#">Crear lista</a></li>
                         <li class="down"><a href="#">Ver lista</a></li>
                         <li class="down"><a href="#">Donar</a></li>
                         
@@ -44,7 +44,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#">Cambiar Contraseña</a></li>
                                 <li><a href="#">Mi perfil</a></li>
-                                <li><a href="#">Cerrar Sesión</a></li>
+                                <li><a href="<?php echo base_url(); ?>controller_usuarios/logout">Cerrar Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
