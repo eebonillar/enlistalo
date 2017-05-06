@@ -13,18 +13,20 @@
 	<title>Enlistalo</title>
 </head>
 <body>
-	<?php
+	
+	<!-- TODO Comprobar que no se haga un registro de usuario ya existente mediante ajax-->
+	<div class="prin">
+		<div class="container">
+			<img class='logo' src="<?php echo base_url(); ?>assets/img/enlistalo/logotipo.png">
+
+		<div class="row col-md-12">
+		<?php
 		session_start();
 		if (isset($_SESSION['msj'])) {
 			echo $_SESSION['msj'];
 			unset($_SESSION['msj']);
 		}
-	?>
-	<!-- TODO Comprobar que no se haga un registro de usuario ya existente mediante ajax-->
-	<div class="prin">
-		<div class="container">
-			<img class='logo' src="<?php echo base_url(); ?>assets/img/enlistalo/logotipo.png">
-		<div class="row">
+		?>
 		<div class="col-md-6">
 			<fieldset><legend>Registro</legend>
         	<form name="registro" autocomplete='off' method='post' action="<?php echo base_url()?>controller_usuarios/registro">

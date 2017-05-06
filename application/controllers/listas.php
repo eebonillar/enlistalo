@@ -8,11 +8,15 @@ class Listas extends CI_Controller {
 		//$this->load->view('verlista');
 		$this->load->view('footer');
 	}
-	
-	public function crear() {
+	public function vertipo(){
+		$this->load->model('model_vertipo');
+		$this->model_vertipo->verTipo();
+
+	}
+	/*public function crear() {
 		$this->load->view('menu');
 		$this->load->view('crearlista');
 		$this->load->view('footer');
 
-	}
+	}*/
 }
