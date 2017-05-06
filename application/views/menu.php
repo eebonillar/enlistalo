@@ -94,7 +94,6 @@
   </div>
 </div>
 <script>
-// Dependiendo de la plataforma seleccionada sacar un listado de juegos
 $("#crear").click( function(){
 	var XHR;    
   XHR = new XMLHttpRequest();
@@ -105,23 +104,7 @@ $("#crear").click( function(){
   };
   XHR.open("GET", "listas/vertipo", true);
   XHR.send();
-});/*
-function mostrartipo() {
-  var XHR;    
-  if (str == "") {
-    document.getElementById("tipo").innerHTML = "";
-    return;
-  }
-  XHR = new XMLHttpRequest();
-  XHR.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("tipo").innerHTML = this.responseText;
-    }
-  };
-  XHR.open("GET", "listas/vertipo", true);
-  XHR.send();
-}*/
-
+});
 </script>
 </body>
 </html>
